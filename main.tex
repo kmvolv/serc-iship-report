@@ -1,6 +1,32 @@
-\documentclass{article}
+\documentclass[a4paper,12pt]{article}
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx,titlesec,sectsty,subfig,hyperref,movie15,animate}
+\usepackage[top=1in,bottom=1in,left=1.05in,right=1.05in]{geometry} 
+\usepackage[titles,subfigure]{tocloft} 
+\usepackage{titletoc}  
+\setcounter{tocdepth}{3}   
+\titlecontents{section}[0ex]  
+              {\addvspace{1ex}\filright}  
+              {\contentspush{\thecontentslabel\ \  }} 
+              {}{\titlerule*[1em]{.}\contentspage}
+\titlecontents{subsection}[14pt]
+              {\addvspace{}\filright \small}
+              {\contentspush{\thecontentslabel\ \ }}
+              {}{} 
+\titlecontents{subsubsection}[14pt]
+              {\addvspace{}\filright \small}
+              {\contentspush\qquad{\thecontentslabel\ \ }}
+              {}{} 
+\usepackage{titlesec} 
+% \titlespacing{\section}{0ex}{*1.1}{*0}   
+% \titlespacing{\subsection}{0ex}{*0.8}{*0}   
+% \titleformat*{\section}{\large \bfseries}  
+% \titleformat*{\subsection}{\normalsize \bfseries}  
+
+\usepackage{graphicx,sectsty,subfig,hyperref,movie15,animate,amssymb,amsmath,amsthm}
+
+% \titlespacing{\subsection}{0ex}{*0.8}{*0}
+% \titleformat*{\subsection}{\normalsize \bfseries}
+
 \usepackage[document]{ragged2e}
 \usepackage[utf8]{inputenc}
 
@@ -30,5 +56,6 @@
 \input{intro}
 \input{work}
 \input{docs}
+\input{future}  
 \input{conclusion}
 \end{document}
